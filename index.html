@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muzammil — Video Editor</title>
+
+  <!-- Fonts (optional, match your previous vibe) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Background blobs (parallax) -->
+    <div class="bg-blobs" aria-hidden="true">
+      <div class="blob blob-1" data-blob="1"></div>
+      <div class="blob blob-2" data-blob="2"></div>
+      <div class="blob blob-3" data-blob="3"></div>
+    </div>
+
+    <!-- Noise overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-left">
+          <span class="dot-wrap">
+            <span class="dot-glow"></span>
+            <span class="dot"></span>
+          </span>
+          <span class="brand" id="brandName">Muzammil</span>
+        </div>
+
+        <div class="nav-right">
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#about" class="nav-link">Services</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="pill">
+            <i data-lucide="sparkles" class="icon icon-sm"></i>
+            <span>Available for projects</span>
+          </div>
+
+          <div class="hero-copy">
+            <h1 class="hero-title">
+              <span class="hero-title-top">Hi, I'm</span><br/>
+              <span class="hero-title-name animate-gradient" id="heroName">Muzammil</span>
+            </h1>
+
+            <p class="hero-hook" id="heroHook">I edit videos people actually finish.</p>
+
+            <p class="hero-sub">
+              If you're a Coach, Solopreneur, CEO, Founder, Consultant, Community Builder, or Business Owner
+            </p>
+
+            <p class="hero-desc">
+              My video editing goes beyond visuals. I help you turn social media attention into real leads and sales.
+              Whether you need real estate video editing, high-converting ads for your personal brand, talking-head videos,
+              or any other content. I deliver exactly what your content needs to perform.
+            </p>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              Start a Project
+              <i data-lucide="arrow-right" class="icon icon-md"></i>
+            </a>
+            <a href="#work" class="btn btn-secondary">View Work</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">590+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">84+</div>
+              <div class="stat-label">Repeated Clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="showreel-wrap">
+            <div class="showreel-glow"></div>
+
+            <div class="showreel-card">
+              <div class="showreel-topbar">
+                <div class="showreel-topbar-left">
+                  <i data-lucide="video" class="icon icon-md violet"></i>
+                  <div>
+                    <div class="showreel-title">Meet Muzammil</div>
+                    <div class="showreel-subtitle">Click to watch</div>
+                  </div>
+                </div>
+                <div class="traffic">
+                  <span class="t red"></span>
+                  <span class="t yellow"></span>
+                  <span class="t green"></span>
+                </div>
+              </div>
+
+              <button class="showreel-player" id="showreelBtn" type="button" aria-label="Play showreel">
+                <img id="showreelThumb" alt="Showreel" />
+                <span class="showreel-overlay"></span>
+                <span class="play-center">
+                  <span class="play-glow"></span>
+                  <span class="play-ring">
+                    <i data-lucide="play" class="icon icon-xl fill"></i>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="pill">
+            <i data-lucide="star" class="icon icon-sm"></i>
+            <span>Featured Work</span>
+          </div>
+          <h2 class="section-title">Recent Projects</h2>
+          <p class="section-desc">
+            Every project tells a story. Here's how I help creators turn views into engaged audiences.
+          </p>
+        </div>
+
+        <div class="grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="pill">
+            <i data-lucide="zap" class="icon icon-sm"></i>
+            <span>What I Do</span>
+          </div>
+          <h2 class="section-title">Services</h2>
+        </div>
+
+        <div class="grid services">
+          <div class="card hover-glow">
+            <i data-lucide="video" class="icon icon-xxl violet"></i>
+            <h3>YouTube Editing</h3>
+            <p>Talking heads, vlogs, story edits. Clean pacing that keeps viewers hooked.</p>
+            <ul>
+              <li><span class="bullet"></span>Structure & flow</li>
+              <li><span class="bullet"></span>B-roll integration</li>
+              <li><span class="bullet"></span>Audio polish</li>
+              <li><span class="bullet"></span>Export optimization</li>
+            </ul>
+          </div>
+
+          <div class="card hover-glow">
+            <i data-lucide="zap" class="icon icon-xxl violet"></i>
+            <h3>Short-form Content</h3>
+            <p>Reels, TikToks, Shorts. Hook-first edits that stop the scroll.</p>
+            <ul>
+              <li><span class="bullet"></span>3-second hooks</li>
+              <li><span class="bullet"></span>Fast-cut rhythm</li>
+              <li><span class="bullet"></span>Vertical optimization</li>
+              <li><span class="bullet"></span>Platform trends</li>
+            </ul>
+          </div>
+
+          <div class="card hover-glow">
+            <i data-lucide="sparkles" class="icon icon-xxl violet"></i>
+            <h3>Polish & Delivery</h3>
+            <p>Color grading, audio mixing, motion graphics. Premium finish.</p>
+            <ul>
+              <li><span class="bullet"></span>Color correction</li>
+              <li><span class="bullet"></span>Sound design</li>
+              <li><span class="bullet"></span>Smooth transitions</li>
+              <li><span class="bullet"></span>Final touches</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about-glow"></div>
+        <div class="about-card">
+          <h2 class="about-title">How it works</h2>
+
+          <div class="about-grid">
+            <div>
+              <p class="about-p">
+                I'm a video editor focused on clean storytelling and strong pacing. If your footage is good, I'll make it feel tight and professional.
+              </p>
+              <p class="about-p dim">
+                If something is unclear, I'll ask fast. If something looks off, I'll fix it. Simple as that.
+              </p>
+            </div>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-num">01</div>
+                <div>
+                  <div class="step-title">Send footage</div>
+                  <div class="step-desc">Drive/Dropbox link</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">02</div>
+                <div>
+                  <div class="step-title">First cut</div>
+                  <div class="step-desc">Structure & pacing</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">03</div>
+                <div>
+                  <div class="step-title">Revisions</div>
+                  <div class="step-desc">You point, I fix</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">04</div>
+                <div>
+                  <div class="step-title">Final export</div>
+                  <div class="step-desc">Ready to upload</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-foot">
+            Send 1-2 reference videos you like. I can match that style.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> <span id="footerName">Muzammil</span>. All rights reserved.</div>
+        <a href="#top" class="backtop">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-bg" data-close="1"></div>
+      <div class="modal-inner" role="dialog" aria-modal="true" aria-label="Video player">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close">
+          <i data-lucide="x" class="icon icon-md"></i>
+        </button>
+        <div class="modal-frame">
+          <div class="ratio">
+            <div id="modalPlayer" class="player"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
